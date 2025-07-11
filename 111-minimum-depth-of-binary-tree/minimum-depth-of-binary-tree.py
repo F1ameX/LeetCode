@@ -12,7 +12,7 @@ class Solution:
         if not root.left and not root.right:
             return 1
 
-        left = right = sys.maxsize
+        left = right = 10**5
 
         if root.left:
             left = self.minDepth(root.left)
