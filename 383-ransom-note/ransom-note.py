@@ -3,15 +3,12 @@ class Solution:
         hashmap = {}
 
         for char in magazine:
-            if char not in hashmap:
-                hashmap[char] = 1
-            else:
-                hashmap[char] += 1
+            hashmap[char] = hashmap.get(char, 0) + 1
         
         for char in ransomNote:
             if char in hashmap and hashmap[char] > 0:
                 hashmap[char] -= 1
             else:
                 return False
-        
+
         return True
