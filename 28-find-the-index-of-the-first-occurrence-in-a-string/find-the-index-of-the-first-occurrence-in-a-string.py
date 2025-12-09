@@ -1,10 +1,13 @@
 class Solution:
     def strStr(self, haystack: str, needle: str) -> int:
         if not needle:
-            return 0
+            return -1
         
-        for i in range(len(haystack) + 1 - len(needle)):
-            if haystack[i: i + len(needle)] == needle:
-                return i
+        n = len(needle)
+
+
+        for idx in range(len(haystack) + 1 - n):
+            if haystack[idx : idx + n] == needle:
+                return idx
         
         return -1
