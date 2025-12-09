@@ -5,9 +5,8 @@ class Solution:
 
         for i in range(len(strs[0])):
             prefix = strs[0][i]
-            for _, word in enumerate(strs):
+            for word in strs:
                 if i == len(word) or word[i] != prefix:
                     return strs[0][0 : i]
         return strs[0]
-        
         
